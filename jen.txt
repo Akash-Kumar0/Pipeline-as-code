@@ -1,0 +1,59 @@
+Jenkins Session 1 - 11/10/23
+------------------------------------------------------------
+
+What & why CI/CD
+what & why Jenkins
+what is Jobs? Different types of job.
+Project Build life cycle
+What is Pipeline
+what & Why Git 
+Basic Git Command
+
+------------------------------------------------------------
+Github Account - create it using personal email id
+How to create Git Repo
+Clone / fork the existing repo
+Process of installation of jenkins in windows
+
+Process of installation of jenkins using AWS Sandbox
+
+Creating a basic jenkins jobs
+
+------------------------------------------------------------
+Raise ticket for Jenkins 
+	Java
+	git
+	maven
+
+------------------------------------------------------------
+
+
+jenkins is 
+
+- opensource automation tool/server
+- java based
+- used for CI/CD of any project
+- supports - multiple languages - java/python/dot net/ruby
+
+
+
+install jenkins - https://www.jenkins.io/doc/book/installing/windows/
+
+
+Run Jenkins - C:\Program Files\Jenkins> java -jar Jenkins.war
+
+
+- Jenkins pipeline is a suite of pluggin and stages which allow to automate the deployement proccess 
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
