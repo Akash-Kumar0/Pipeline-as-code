@@ -1,0 +1,75 @@
+Jenkins Session 1 - AWS Sandbox
+
+--------------------------------------------------------------------
+
+login to pluralsight -> choose Skills -> sign in with company or school > enter capgemini.com
+
+link - https://app.pluralsight.com/labs/detail/4fe4103c-9fe0-4efa-8ab7-cdf31b591a42/toc
+----------------------------------------------------------------------
+
+Start the lab with the above link - it will be there for 2 hours
+- open the aws console using incognito mode
+- copy username paste it
+- copy password paste it and login
+
+Now we will create new Virtual machine in AWS 
+- choose EC2 or search for EC2
+- select Instances 
+- click on launch instances
+- enter the ec2 instance name - jenkins-ec2-vm-instance
+- select linux
+- t2 micro
+- download the keypair  - .pem file is a safe location (very imp)
+- netwoking security groups - allows all traffic - http, https, ssh
+- launch instance
+
+once the instance is launched , 
+- you can configure the inbound rule for enabling all traffic from anywhere 
+- custom tcp rule - 8080 port from anywhere
+- save the changes
+
+
+Now goto the instance summary - > click on connect -> ssh -> copy the ssh last command from here
+
+goto the pem file location and open the cmd prompt -> paste the ssh cmd you copied -> enter yes
+
+once the instance got connected
+
+then execute the below command for java and jenkins installation 
+
+- refer offical documentation copy the below command and right click on the vi editor and paste there
+
+(For Linux instance command – refer this link https://www.jenkins.io/doc/book/installing/linux/#red-hat-centos) refer this for installing jdk on linux - https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/amazon-linux-install.html
+
+#---------------------------------------------
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install java-11-amazon-corretto -y
+sudo java -version
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+#----------------------------------------------
+
+now open the browser - and enter the http://awspublicip:8080
+
+- copy paste the admin password which in there on the linux aws ssh console
+- install the plugins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
