@@ -5,6 +5,11 @@ pipeline {
         name="Jenkins"
     }
     stages{
+        stage("build"){
+            steps{
+                git url: "https://github.com/Akash-Kumar0/Pipeline-as-code.git", branch: "main"
+            }
+        }
         stage("env-variable"){
             steps{
                 bat "set"
