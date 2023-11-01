@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    
+    environment{
+        name="Jenkins"
+    }
+    stages{
+        stage("env-variable"){
+            steps{
+                bat "set"
+            }
+        }
+        stage("Build-number"){
+            steps{
+                echo "This is build number ${env.BUILD_NUMBER}"
+                echo "this is different method to get variable ${BUILD_NUMBER}"
+                echo "This is global level ${env.name}"
+            }
+        }
+        stage("stage"){
+            environment{
+                company="Capgemini"
+            }
+           
+            steps{
+                 script{
+                     env.city="delhi"
+                 }
+                 
+                withEnv(["friend=deepak"]){
+                     echo "Friend is ${env.friend}"
+                }
+                
+                echo "This is stage level and company is ${env.company}" 
+                echo "City is ${env.city}"
+               
+            }
+        }
+    }
+}
