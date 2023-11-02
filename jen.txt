@@ -45,7 +45,7 @@ Run Jenkins - C:\Program Files\Jenkins> java -jar Jenkins.war
 
 - Jenkins pipeline is a suite of pluggin and stages which allow to automate the deployement proccess 
 
-------------------------------------------------------------------------------------------------The end
+------------------------------------------------------------------------------------------------
 
 
 
